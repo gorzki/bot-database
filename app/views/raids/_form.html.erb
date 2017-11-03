@@ -1,0 +1,52 @@
+<%= form_with(model: raid, local: true) do |form| %>
+  <% if raid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(raid.errors.count, "error") %> prohibited this raid from being saved:</h2>
+
+      <ul>
+      <% raid.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :shortcut %>
+    <%= form.text_field :shortcut, id: :raid_shortcut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :raid_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level, id: :raid_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :window %>
+    <%= form.number_field :window, id: :raid_window %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tod %>
+    <%= form.datetime_select :tod, id: :raid_tod %>
+  </div>
+
+  <div class="field">
+    <%= form.label :next %>
+    <%= form.datetime_select :next, id: :raid_next %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link, id: :raid_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

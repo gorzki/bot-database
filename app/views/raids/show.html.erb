@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shortcut:</strong>
+  <%= @raid.shortcut %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @raid.name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @raid.level %>
+</p>
+
+<p>
+  <strong>Window:</strong>
+  <%= @raid.window %>
+</p>
+
+<p>
+  <strong>Tod:</strong>
+  <%= @raid.tod %>
+</p>
+
+<p>
+  <strong>Next:</strong>
+  <%= @raid.next %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @raid.link %>
+</p>
+
+<%= link_to 'Edit', edit_raid_path(@raid) %> |
+<%= link_to 'Back', raids_path %>

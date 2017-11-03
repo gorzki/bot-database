@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Raids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shortcut</th>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Window</th>
+      <th>Tod</th>
+      <th>Next</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @raids.each do |raid| %>
+      <tr>
+        <td><%= raid.shortcut %></td>
+        <td><%= raid.name %></td>
+        <td><%= raid.level %></td>
+        <td><%= raid.window %></td>
+        <td><%= raid.tod %></td>
+        <td><%= raid.next %></td>
+        <td><%= raid.link %></td>
+        <td><%= link_to 'Show', raid %></td>
+        <td><%= link_to 'Edit', edit_raid_path(raid) %></td>
+        <td><%= link_to 'Destroy', raid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raid', new_raid_path %>
